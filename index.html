@@ -3,95 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Mohibul Hossain | Software Engineer</title>
+    <title>Mohammed Mohibul Hossain | Portfolio</title>
+    <meta name="description" content="Portfolio of Mohammed Mohibul Hossain — Lead Engineer & Software Architect.">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:title" content="Mohammed Mohibul Hossain | Portfolio">
+    <meta property="og:description" content="Lead Engineer & Software Architect with a passion for scalable backend systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/profile.png">
+    <meta property="og:image:alt" content="Portrait of Mohammed Mohibul Hossain">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="assets/profile.png" type="image/png">
     <style>
         :root {
-            --bg: #ffffff;
-            --text: #1d1d1f;
-            --secondary: #6e6e73;
-            --accent: #0066cc;
-            --card-bg: #f5f5f7;
+            --bg: #1a1a1a;
+            --text-main: #ffffff;
+            --text-secondary: #999999;
+            --text-tertiary: #666666;
+            --button-text: #777777;
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--bg);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 0;
+            font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.005em;
+            line-height: 1.45;
         }
-        header {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #e5e5e5;
-            padding-bottom: 20px;
+
+        .page {
+            width: min(720px, 92vw);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 56px 20px 48px;
+            position: relative;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 8px; font-weight: 700; }
-        h2 { font-size: 1.5rem; margin-top: 30px; color: var(--text); border-bottom: 1px solid #f5f5f7; padding-bottom: 5px;}
-        p { color: var(--secondary); margin: 8px 0; }
-        .contact-links a {
-            margin-right: 15px;
-            color: var(--accent);
+
+        .top-links {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            display: flex;
+            gap: 18px;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+            text-transform: none;
+        }
+
+        .top-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .avatar {
+            width: clamp(96px, 16vw, 130px);
+            height: clamp(96px, 16vw, 130px);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #2a2a2a;
+            background: #2a2a2a;
+            box-shadow: 0 0 0 1px #2a2a2a;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 {
+            font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+            font-weight: 600;
+            margin: 0;
+            color: var(--text-main);
+            letter-spacing: 0.01em;
+        }
+
+        .headline {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 520px;
+        }
+
+        .headline span {
+            color: var(--text-secondary);
+            font-size: clamp(0.98rem, 2vw, 1.1rem);
+        }
+
+        .focus {
+            color: var(--text-tertiary);
+            font-size: clamp(0.92rem, 1.9vw, 1.05rem);
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .skills-title {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .skills-list {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
+
+        .cta {
+            margin-top: 4px;
+        }
+
+        .cta a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 9px 26px;
+            background: #ffffff;
+            color: var(--button-text);
+            border-radius: 999px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
         }
-        .contact-links a:hover { text-decoration: underline; }
-        .item-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 15px;
+
+        @media (max-width: 900px) {
+            .page {
+                width: min(640px, 92vw);
+            }
+
+            .headline {
+                max-width: 480px;
+            }
         }
-        .card-title { font-weight: 600; font-size: 1.1rem; color: var(--text); }
-        .card-subtitle { color: var(--secondary); font-size: 0.95rem; margin-bottom: 10px; }
+
+        @media (max-width: 640px) {
+            .top-links {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+                gap: 12px;
+            }
+
+            .page {
+                padding: 32px 18px 40px;
+            }
+
+            .content {
+                gap: 18px;
+            }
+
+            .headline {
+                gap: 6px;
+            }
+
+            .skills-list {
+                max-width: 280px;
+                line-height: 1.6;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-links {
+                flex-wrap: wrap;
+                row-gap: 8px;
+            }
+
+            h1 {
+                font-size: clamp(1.7rem, 6vw, 2rem);
+            }
+
+            .headline span,
+            .focus {
+                font-size: 0.95rem;
+            }
+
+            .skills-title {
+                font-size: 0.78rem;
+            }
+
+            .cta a {
+                padding: 8px 22px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="page">
+        <nav class="top-links" aria-label="Social links">
+            <a href="https://linkedin.com/in/mohibul-hossain" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+            <a href="https://github.com/rahomi" target="_blank" rel="noreferrer" aria-label="GitHub profile">GitHub</a>
+            <a href="mailto:mohib.hossain.bu@gmail.com" aria-label="Email Mohammed">Email</a>
+        </nav>
 
-    <header>
-        <h1>Mohammed Mohibul Hossain</h1>
-        <p>Lead Engineer & Software Architect</p>
-        <div class="contact-links">
-            <a href="mailto:mohib.hossain.bu@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/mohibul-hossain" target="_blank">LinkedIn</a>
-            <a href="https://github.com/rahomi" target="_blank">GitHub</a>
-        </div>
-    </header>
-
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Passionate Lead Engineer with a focus on scalable architecture and modern AI integration. I thrive in high-agency environments, building robust backend systems using Python, C#, and Clean Architecture. Always learning, always building, and obsessed with staying at the cutting edge of AI-driven development.</p>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <div class="item-card">
-                <div class="card-title">Lead Engineer, Galaxy Buds Windows Team</div>
-                <div class="card-subtitle">Samsung R&D Institute Bangladesh • 2025 - Present</div>
-                <p>Leading connectivity solutions for Windows using C#, UWP, and WPF. Serving as a Bluetooth consultant and driving high-impact integration across Samsung's device ecosystem.</p>
+        <main class="content">
+            <div class="avatar">
+                <img src="assets/profile.png" alt="Portrait of Mohammed Mohibul Hossain" loading="lazy">
             </div>
-            <div class="item-card">
-                <div class="card-title">Software Engineer</div>
-                <div class="card-subtitle">Samsung R&D Institute Bangladesh • 2020 - 2025</div>
-                <p>Developed and maintained complex Windows desktop applications, ensuring performance and robust hardware/software integration.</p>
-            </div>
-        </section>
 
-        <section>
-            <h2>Selected Projects</h2>
-            <div class="item-card">
-                <div class="card-title">Sales Management System</div>
-                <div class="card-subtitle">ASP.NET Core 9, Clean Architecture, DDD, CQRS</div>
-                <p>Designed a scalable inventory system using Domain-Driven Design and CQRS. Implemented containerization with Docker and cloud integration via AWS S3/SQS.</p>
-            </div>
-            <div class="item-card">
-                <div class="card-title">Watchdog Application</div>
-                <div class="card-subtitle">C++, Multithreading, Native Windows API</div>
-                <p>High-performance monitoring system for mission-critical processes using fine-grained mutex synchronization and native Windows process management.</p>
-            </div>
-        </section>
-    </main>
+            <h1>Hi, I'm Mohibul.</h1>
 
+            <div class="headline">
+                <span>Lead Engineer building scalable systems.</span>
+                <div class="focus">⚡ Currently focused on Distributed Systems at Samsung R&amp;D Institute Bangladesh.</div>
+            </div>
+
+            <div class="skills">
+                <div class="skills-title">Top Skills</div>
+                <div class="skills-list">C# • .NET • Windows</div>
+            </div>
+
+            <div class="cta">
+                <a href="mailto:mohib.hossain.bu@gmail.com">Say Hello</a>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
