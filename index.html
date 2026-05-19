@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Mohibul Hossain | Software Engineer</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1d1d1f;
+            --secondary: #6e6e73;
+            --accent: #0066cc;
+            --card-bg: #f5f5f7;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 20px;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 8px; font-weight: 700; }
+        h2 { font-size: 1.5rem; margin-top: 30px; color: var(--text); border-bottom: 1px solid #f5f5f7; padding-bottom: 5px;}
+        p { color: var(--secondary); margin: 8px 0; }
+        .contact-links a {
+            margin-right: 15px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-links a:hover { text-decoration: underline; }
+        .item-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .card-title { font-weight: 600; font-size: 1.1rem; color: var(--text); }
+        .card-subtitle { color: var(--secondary); font-size: 0.95rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mohammed Mohibul Hossain</h1>
+        <p>Lead Engineer & Software Architect</p>
+        <div class="contact-links">
+            <a href="mailto:mohib.hossain.bu@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/mohibul-hossain" target="_blank">LinkedIn</a>
+            <a href="https://github.com/rahomi" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Passionate Lead Engineer with a focus on scalable architecture and modern AI integration. I thrive in high-agency environments, building robust backend systems using Python, C#, and Clean Architecture. Always learning, always building, and obsessed with staying at the cutting edge of AI-driven development.</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="item-card">
+                <div class="card-title">Lead Engineer, Galaxy Buds Windows Team</div>
+                <div class="card-subtitle">Samsung R&D Institute Bangladesh • 2025 - Present</div>
+                <p>Leading connectivity solutions for Windows using C#, UWP, and WPF. Serving as a Bluetooth consultant and driving high-impact integration across Samsung's device ecosystem.</p>
+            </div>
+            <div class="item-card">
+                <div class="card-title">Software Engineer</div>
+                <div class="card-subtitle">Samsung R&D Institute Bangladesh • 2020 - 2025</div>
+                <p>Developed and maintained complex Windows desktop applications, ensuring performance and robust hardware/software integration.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Selected Projects</h2>
+            <div class="item-card">
+                <div class="card-title">Sales Management System</div>
+                <div class="card-subtitle">ASP.NET Core 9, Clean Architecture, DDD, CQRS</div>
+                <p>Designed a scalable inventory system using Domain-Driven Design and CQRS. Implemented containerization with Docker and cloud integration via AWS S3/SQS.</p>
+            </div>
+            <div class="item-card">
+                <div class="card-title">Watchdog Application</div>
+                <div class="card-subtitle">C++, Multithreading, Native Windows API</div>
+                <p>High-performance monitoring system for mission-critical processes using fine-grained mutex synchronization and native Windows process management.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
