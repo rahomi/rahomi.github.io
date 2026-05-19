@@ -11,8 +11,23 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/profile.png">
     <meta property="og:image:alt" content="Portrait of Mohammed Mohibul Hossain">
-    <meta name="twitter:card" content="summary">
-    <link rel="icon" href="assets/profile.png" type="image/png">
+        <meta name="twitter:card" content="summary">
+        <link rel="icon" href="assets/profile.png" type="image/png">
+        <link rel="canonical" href="https://rahomi.github.io/">
+        <meta name="color-scheme" content="dark">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Mohammed Mohibul Hossain",
+            "url": "https://rahomi.github.io/",
+            "jobTitle": "Lead Engineer",
+            "sameAs": [
+                "https://github.com/rahomi",
+                "https://linkedin.com/in/mohibul-hossain"
+            ]
+        }
+        </script>
     <style>
         :root {
             --bg: #1a1a1a;
@@ -212,13 +227,30 @@
                 font-size: 0.85rem;
             }
         }
+        /* Accessibility tweaks */
+        :focus {
+            outline: none;
+        }
+
+        :focus-visible {
+            outline: 3px solid #ffffff33;
+            outline-offset: 4px;
+            border-radius: 6px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="page">
         <nav class="top-links" aria-label="Social links">
-            <a href="https://linkedin.com/in/mohibul-hossain" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
-            <a href="https://github.com/rahomi" target="_blank" rel="noreferrer" aria-label="GitHub profile">GitHub</a>
+            <a href="https://linkedin.com/in/mohibul-hossain" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+            <a href="https://github.com/rahomi" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
             <a href="mailto:mohib.hossain.bu@gmail.com" aria-label="Email Mohammed">Email</a>
         </nav>
 
@@ -226,7 +258,7 @@
             <div class="avatar">
                 <picture>
                     <source srcset="assets/profile.webp" type="image/webp">
-                    <img src="assets/profile-400.png" alt="Portrait of Mohammed Mohibul Hossain" loading="lazy" width="130" height="130">
+                    <img src="assets/profile-400.png" srcset="assets/profile-400.png 400w, assets/profile.png 800w" sizes="(max-width:480px) 96px, 130px" alt="Portrait of Mohammed Mohibul Hossain" loading="lazy" decoding="async" width="130" height="130">
                 </picture>
             </div>
 
