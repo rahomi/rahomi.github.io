@@ -1,0 +1,7 @@
+# Ignore local assets folder used for development
+Assets.local/
+assets.local/
+
+# Common OS/editor metadata
+.DS_Store
+Thumbs.db
